@@ -8,12 +8,22 @@
   padding: 0;
 }
 
-:root {
-  --primary-color: #f9b64d;
+@font-face{
+  font-family:'font\'fortnite.otf';
+  src: url('font/fortnite.otf');   
 }
 
+
+:root {
+  --primary-color: #00173d;
+}
+
+*{
+  
+}
 body {
-  font-family: 'Poppins', sans-serif;
+  /*font-family: 'Poppins', sans-serif;*/
+  
   font-size: 16px;
   line-height: 1.5;
   color: #333;
@@ -22,12 +32,21 @@ body {
 
 /* Navbar */
 .navbar {
-  background: #333;
+  background: #00173d;
   color: #fff;
   padding: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.logo{
+  display: flex;
+  flex-direction: row;
+}
+.somosLogo{
+  width: 50px;
+  height: 50px;
 }
 
 .navbar ul {
@@ -40,7 +59,7 @@ body {
 }
 
 .navbar a {
-  color: #fff;
+  color: #00ccff;
   text-decoration: none;
   font-size: 1.2rem;
 }
@@ -58,9 +77,13 @@ body {
 
 .showcase h1 {
   font-size: 2.5rem;
-  color: #333;
+  color: #00ccff;
   text-align: center;
   padding: 1rem 0;
+}
+
+.showcase, h2 {
+  color: #00ccff
 }
 
 .showcase form {
@@ -72,15 +95,27 @@ body {
   width: 100%;
 }
 
+
+
+
 .showcase form input,
 form select {
   font-size: 20px;
   width: 500px;
   max-width: 500px;
   padding: 1rem;
-  border: 1px solid #ccc;
   border-radius: 5px;
   margin-bottom: 1rem;
+  background-color: #00ccff;
+  color: white;
+  border: none;
+  border-bottom: solid #081e9b;
+  outline: none;
+
+}
+
+::placeholder{
+  color: white;
 }
 
 form button {
@@ -88,14 +123,21 @@ form button {
   padding: 1rem 2rem;
   border: none;
   border-radius: 5px;
-  background: #333;
-  color: #fff;
+  background: #00ccff;
+  color: #00173d;
   cursor: pointer;
   margin-top: 20px;
+  font-style: italic;
 }
 
 form button:hover {
   transform: scale(1.1);
+  /*background: #0152e7;*/
+  color: white;
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 0%, rgba(0,212,255,1) 100%);
+  transition-duration: 375ms, 750ms, 750ms;
+  transition-property: background, linear-gradient(),scale();
 }
 
 /* Image */
