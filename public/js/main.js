@@ -11,6 +11,8 @@ function onSubmit(e) {
       alert('Please add some text');
       return;
     }
+
+    
   
     generateImageRequest(prompt, size);
   }
@@ -49,11 +51,15 @@ function onSubmit(e) {
   }
   
   function showSpinner() {
+    document.querySelector('.spinner-container').classList.add('show');
     document.querySelector('.spinner').classList.add('show');
+    document.querySelector('.logoSamos').classList.add('show');
   }
   
   function removeSpinner() {
     document.querySelector('.spinner').classList.remove('show');
+    document.querySelector('.logoSamos').classList.remove('show');
+    document.querySelector('.spinner-container').classList.remove('show');
   }
   
   document.querySelector('#image-form').addEventListener('submit', onSubmit);
